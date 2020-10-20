@@ -63,6 +63,21 @@ error: failed to push some refs to 'https://github.com/kaicarver/blitzy.git'
 
 I'll try installing Jest to see if it goes away.
 
+Update: no, Blitz comes with Jest installed already.
+
+The important message is probably:
+
+```text
+No tests found, exiting with code 1
+```
+
+So probably I just need to add some test.
+Why doesn't `blitz new` provide a test file so this won't happen?
+
+#### Slow
+
+Playing around with the app, first load of any page is very slow. Guess that's normal, maybe mostly noticeable in dev version?
+
 ---
 
 This is the boilerplate Blitz.js Readme.md:
@@ -70,8 +85,6 @@ This is the boilerplate Blitz.js Readme.md:
 [![Blitz.js](https://raw.githubusercontent.com/blitz-js/art/master/github-cover-photo.png)](https://blitzjs.com)
 
 This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
-
-# **name**
 
 ## Getting Started
 
