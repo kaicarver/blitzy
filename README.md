@@ -78,6 +78,14 @@ Why doesn't `blitz new` provide a test file so this won't happen?
 
 Playing around with the app, first load of any page is very slow. Guess that's normal, maybe mostly noticeable in dev version?
 
+#### Restart required
+
+Changes here:
+
+<https://blitzjs.com/docs/tutorial#writing-a-minimal-form>
+
+required Ctrl-C and start before taking effect.
+
 ---
 
 This is the boilerplate Blitz.js Readme.md:
