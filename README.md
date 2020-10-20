@@ -1,3 +1,72 @@
+# Blitzy
+
+This is me trying out the Blitz.js tutorial.
+
+## Notes
+
+### (Minor) problems doing the tutorial
+
+#### No anonymous default export
+
+Can't commit the "simplest page possible in Blitz" without `--no-verify`.
+
+<https://blitzjs.com/docs/tutorial#write-your-first-page>
+
+because it gives a linting error:
+
+<https://github.com/benmosher/eslint-plugin-import/blob/v2.22.1/docs/rules/no-anonymous-default-export.md>
+
+I used the workaround
+
+```typescript
+/* eslint import/no-anonymous-default-export: [2, {"allowArrowFunction": true}] */
+```
+
+but it would be better to just do what lint recommends...
+
+#### Jest not installed
+
+Can't push to Github without `--no-verify`.
+
+I get this unfriendly error:
+
+```text
+husky > pre-push (node v12.13.1)
+
+> blitzy@1.0.0 lint /home/kai/blitzy
+> eslint --ignore-path .gitignore --ext .js,.ts,.tsx .
+
+
+> blitzy@1.0.0 test /home/kai/blitzy
+> jest
+
+No tests found, exiting with code 1
+Run with `--passWithNoTests` to exit with code 0
+No files found in /home/kai/blitzy.
+Make sure Jest's configuration does not exclude this directory.
+To set up Jest, make sure a package.json file exists.
+Jest Documentation: facebook.github.io/jest/docs/configuration.html
+Pattern:  - 0 matches
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! blitzy@1.0.0 test: `jest`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the blitzy@1.0.0 test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/kai/.npm/_logs/2020-10-20T10_22_34_907Z-debug.log
+husky > pre-push hook failed (add --no-verify to bypass)
+error: failed to push some refs to 'https://github.com/kaicarver/blitzy.git'
+```
+
+I'll try installing Jest to see if it goes away.
+
+---
+
+This is the boilerplate Blitz.js Readme.md:
+
 [![Blitz.js](https://raw.githubusercontent.com/blitz-js/art/master/github-cover-photo.png)](https://blitzjs.com)
 
 This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
