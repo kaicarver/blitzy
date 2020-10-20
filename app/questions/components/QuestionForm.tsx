@@ -17,8 +17,6 @@ const QuestionForm = ({ initialValues, onSubmit }: QuestionFormProps) => {
       <input placeholder="Choice 1" />
       <input placeholder="Choice 2" />
       <input placeholder="Choice 3" />
-
-      <div>{JSON.stringify(initialValues)}</div>
       <button>Submit</button>
     </form>
   )

@@ -13,19 +13,20 @@ export const EditQuestion = () => {
 
   return (
     <div>
-      <h1>Edit Question {question.id}</h1>
-      <pre>{JSON.stringify(question)}</pre>
+      <h1>Edit Question {question.id} {question.text}</h1>
 
       <QuestionForm
         initialValues={question}
-        onSubmit={async () => {
+        onSubmit={async (event) => {
           try {
             const updated = await updateQuestionMutation({
               where: { id: question.id },
-              data: { text: "Do you really love Blitz?" },
+              data: {
+                text: event.target[0].value,  
+              },
             })
             await mutate(updated)
-            alert("Success!" + JSON.stringify(updated))
+            //alert("Success!" + JSON.stringify(updated))
             router.push("/questions/[questionId]", `/questions/${updated.id}`)
           } catch (error) {
             console.log(error)
