@@ -23,7 +23,7 @@ export const QuestionsList = () => {
         {questions.map((question) => (
           <li key={question.id}>
             <Link href="/questions/[questionId]" as={`/questions/${question.id}`}>
-              <a>{question.name}</a>
+              <a>{question.text}</a>
             </Link>
           </li>
         ))}
