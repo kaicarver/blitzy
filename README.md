@@ -86,6 +86,30 @@ Changes here:
 
 required Ctrl-C and start before taking effect.
 
+#### Compilation error
+
+...
+
+#### typo
+
+Towards the end, 
+
+```typescript
+const updated = await updateChoice({
+```
+
+should be
+
+```typescript
+const updated = await updateChoiceMutation({
+```
+
+
+
+
+
+
+
 ---
 
 This is the boilerplate Blitz.js Readme.md:
